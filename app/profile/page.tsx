@@ -37,14 +37,6 @@ export default function ProfilePage() {
             progress: "100%",
             status: "completed"
         },
-        {
-            id: 3,
-            type: "quiz",
-            title: "Dövlət Qulluğu: Konstitusiya",
-            date: "17 Fevral",
-            score: "78%",
-            status: "completed"
-        }
     ];
 
     return (

@@ -2,7 +2,7 @@ export type Lesson = {
     id: string;
     title: string;
     description: string;
-    category: "Məntiq" | "İnformatika" | "Dövlət Qulluğu" | "Digər";
+    category: "Məntiq" | "İnformatika" | "Digər";
     topic: string;
     difficulty: "Asan" | "Orta" | "Çətin";
     duration: string; // e.g., "12 dəq"
@@ -36,18 +36,7 @@ export const lessons: Lesson[] = [
         videoUrl: "placeholder",
         date: "2024-02-10",
     },
-    {
-        id: "3",
-        title: "Dövlət Qulluğu: Konstitusiya (Maddə 1-23)",
-        description: "Azərbaycan Respublikasının Konstitusiyası. Əsas insan və vətəndaş hüquqları.",
-        category: "Dövlət Qulluğu",
-        topic: "Qanunvericilik",
-        difficulty: "Çətin",
-        duration: "30 dəq",
-        thumbnailUrl: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&q=80",
-        videoUrl: "placeholder",
-        date: "2024-02-05",
-    },
+
     {
         id: "4",
         title: "Məntiq: Cədvəllər",
@@ -84,6 +73,126 @@ export const lessons: Lesson[] = [
         videoUrl: "placeholder",
         date: "2024-01-25",
     },
+    {
+        id: "7",
+        title: "MƏNTİQ | QƏBULDAN ƏVVƏLKİ SINAQ | DİM SINAQ 2024",
+        description: "2024-cü il qəbul imtahanı üçün DİM sınaq izahı.",
+        category: "Məntiq",
+        topic: "Sınaq",
+        difficulty: "Çətin",
+        duration: "45 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/MbiOKP0tcwc/maxresdefault.jpg",
+        videoUrl: "MbiOKP0tcwc",
+        date: "2024-02-20",
+    },
+    {
+        id: "8",
+        title: "DİM | 2023 SINAQ (QƏBULDAN ƏVVƏLKİ) | MƏNTİQ",
+        description: "2023-cü il qəbul imtahanı öncəsi sınaq izahı.",
+        category: "Məntiq",
+        topic: "Sınaq",
+        difficulty: "Çətin",
+        duration: "50 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/WYrEbaI1W_Q/maxresdefault.jpg",
+        videoUrl: "WYrEbaI1W_Q",
+        date: "2024-02-19",
+    },
+    {
+        id: "9",
+        title: "DİM | MƏNTİQ | SINAQ (2021)",
+        description: "2021-ci il Dövlət İmtahan Mərkəzi məntiq sınağı.",
+        category: "Məntiq",
+        topic: "Sınaq",
+        difficulty: "Orta",
+        duration: "40 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/bgGaQKX7DkY/maxresdefault.jpg",
+        videoUrl: "bgGaQKX7DkY",
+        date: "2024-02-18",
+    },
+    {
+        id: "10",
+        title: "RİYAZİ MƏSƏLƏLƏR - QƏBULA DÜŞƏ BİLƏCƏK",
+        description: "Qəbul imtahanlarında ən çox rast gəlinən riyazi məsələ tipləri.",
+        category: "Məntiq",
+        topic: "Riyazi Məsələlər",
+        difficulty: "Orta",
+        duration: "35 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/ZSb3nBOsdgc/maxresdefault.jpg",
+        videoUrl: "ZSb3nBOsdgc",
+        date: "2024-02-17",
+    },
+    {
+        id: "11",
+        title: "26 QƏBUL TİPLİ SUAL | QEYRİ-AŞKAR OPERATORLAR",
+        description: "DİM qəbul tipli qeyri-aşkar operator suallarının izahı.",
+        category: "Məntiq",
+        topic: "Operatorlar",
+        difficulty: "Orta",
+        duration: "30 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/wOfFvkK0C00/maxresdefault.jpg",
+        videoUrl: "wOfFvkK0C00",
+        date: "2024-02-16",
+    },
+    {
+        id: "12",
+        title: "QƏBUL TİPLİ 15 SUAL (MƏNTİQ) DİM",
+        description: "Dövlət qulluğu və magistratura üçün 15 qəbul tipli sual.",
+        category: "Məntiq",
+        topic: "Qarışıq",
+        difficulty: "Orta",
+        duration: "25 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/7pxO_eQpVlg/maxresdefault.jpg",
+        videoUrl: "7pxO_eQpVlg",
+        date: "2024-02-15",
+    },
+    {
+        id: "13",
+        title: "MƏNTİQ (QƏBUL) | 2022",
+        description: "2022-ci il qəbul imtahanı suallarının təhlili.",
+        category: "Məntiq",
+        topic: "Sınaq",
+        difficulty: "Çətin",
+        duration: "55 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/E3l6ZvFKzQw/maxresdefault.jpg",
+        videoUrl: "E3l6ZvFKzQw",
+        date: "2024-02-14",
+    },
+    {
+        id: "14",
+        title: "FUTOSHIKI NECƏ HƏLL EDİLİR?",
+        description: "Futoshiki məntiq oyununun həll qaydaları və taktikaları.",
+        category: "Məntiq",
+        topic: "Şəkil Oyunları",
+        difficulty: "Asan",
+        duration: "15 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/USNuOf7AV-E/maxresdefault.jpg",
+        videoUrl: "USNuOf7AV-E",
+        date: "2024-02-13",
+    },
+    {
+        id: "15",
+        title: "SUDOKU NECƏ HƏLL EDİLİR?",
+        description: "Sudoku həll etməyin sirləri və praktik yollar.",
+        category: "Məntiq",
+        topic: "Şəkil Oyunları",
+        difficulty: "Asan",
+        duration: "18 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/DEV2bHCBhvc/maxresdefault.jpg",
+        videoUrl: "DEV2bHCBhvc",
+        date: "2024-02-12",
+    },
+    {
+        id: "16",
+        title: "6 Qızıl Qayda",
+        description: "Məntiq testlərini daha sürətli həll etmək üçün 6 vacib qayda.",
+        category: "Məntiq",
+        topic: "Strategiya",
+        difficulty: "Orta",
+        duration: "12 dəq",
+        thumbnailUrl: "https://img.youtube.com/vi/0GA48okGvmE/maxresdefault.jpg",
+        videoUrl: "0GA48okGvmE",
+        date: "2024-02-11",
+    },
 ];
 
 export type Question = {
@@ -100,7 +209,7 @@ export type Quiz = {
     description: string;
     questions: Question[];
     duration: number; // in minutes
-    category: "Məntiq" | "İnformatika" | "Dövlət Qulluğu" | "Qarışıq";
+    category: "Məntiq" | "İnformatika" | "Qarışıq";
     difficulty: "Asan" | "Orta" | "Çətin";
 };
 
@@ -181,30 +290,7 @@ export const quizzes: Quiz[] = [
             },
         ],
     },
-    {
-        id: "quiz-3",
-        title: "Dövlət Qulluğu: Qanunvericilik",
-        description: "Konstitusiya və Dövlət Qulluğu haqqında qanun üzrə sınaq.",
-        duration: 20,
-        category: "Dövlət Qulluğu",
-        difficulty: "Çətin",
-        questions: [
-            {
-                id: "q1",
-                text: "Azərbaycan Respublikasında dövlət hakimiyyətinin yeganə mənbəyi kimdir?",
-                options: ["Prezident", "Xalq", "Milli Məclis", "Konstitusiya Məhkəməsi"],
-                correctAnswer: 1,
-                explanation: "Konstitusiyanın 1-ci maddəsinə əsasən, dövlət hakimiyyətinin yeganə mənbəyi Azərbaycan xalqıdır.",
-            },
-            {
-                id: "q2",
-                text: "Dövlət qulluqçusu kimdir?",
-                options: ["Dövlət orqanında maaş alan hər kəs", "Yalnız rəhbər vəzifə tutanlar", "İnzibati və yardımçı vəzifə tutan şəxslər", "Dövlət orqanında ştatda olan hər kəs"],
-                correctAnswer: 2,
-                explanation: "Dövlət qulluğu haqqında qanuna əsasən, dövlət qulluqçusu inzibati və ya yardımçı vəzifə tutan şəxsdir.",
-            },
-        ],
-    },
+
 ];
 
 export type BlogPost = {
@@ -215,7 +301,7 @@ export type BlogPost = {
     content: string; // HTML or Markdown content
     author: string;
     date: string;
-    category: "Təhsil" | "Məntiq" | "İnformatika" | "Dövlət Qulluğu";
+    category: "Təhsil" | "Məntiq" | "İnformatika";
     imageUrl: string;
     tags: string[];
 };
@@ -235,9 +321,6 @@ export const blogPosts: BlogPost[] = [
 
       <h2>2. İnformatika: Excel Düsturları</h2>
       <p>MS Excel proqramından ən azı 2 sual düsturlarla bağlı olur. IF, COUNT, SUM kimi funksiyaların iş prinsiplərini mükəmməl bilməlisiniz.</p>
-
-      <h2>3. Qanunvericilik: Konstitusiya</h2>
-      <p>Dövlət qulluğu imtahanlarında Konstitusiyanın ilk 2 fəsli ən çox sual doğuran hissələrdir. İnsan və vətəndaş hüquqları maddələrini əzbərləmək yox, mahiyyətini başa düşmək lazımdır.</p>
 
       <h2>Nəticə</h2>
       <p>İmtahana hazırlaşarkən bu mövzulara xüsusi diqqət yetirməklə nəticənizi 10-15 bal artıra bilərsiniz. Uğurlar!</p>
@@ -269,24 +352,7 @@ export const blogPosts: BlogPost[] = [
         imageUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80",
         tags: ["Məntiq", "Səhvlər", "Strategiya"],
     },
-    {
-        id: "3",
-        slug: "dovlet-qulluguna-hazirliq",
-        title: "Dövlət Qulluğuna Necə Hazırlaşmalı?",
-        excerpt: "Sıfırdan başlayaraq dövlət qulluqçusu olmaq üçün addım-addım bələdçi.",
-        content: `
-      <h2>Planlı Çalışmaq</h2>
-      <p>Dövlət qulluğu imtahanı geniş materialı əhatə edir. Qanunvericilik, Məntiq, İnformatika və Azərbaycan dili. Hər biri üçün ayrı vaxt ayırmalı və qrafik tutmalısınız.</p>
 
-      <h2>Resurs Seçimi</h2>
-      <p>Yalnız rəsmi mənbələrdən və təsdiq olunmuş dərs vəsaitlərindən istifadə edin. Qanunvericilikdəki son dəyişiklikləri izləmək mütləqdir.</p>
-    `,
-        author: "Emrah Əhmədov",
-        date: "10 Fevral 2024",
-        category: "Dövlət Qulluğu",
-        imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-        tags: ["Karyera", "Dövlət Qulluğu"],
-    },
 ];
 
 export type LogicTopic = {

@@ -9,7 +9,7 @@ export default function TestsPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState<string>("Bütün");
 
-    const categories = ["Bütün", "Məntiq", "İnformatika", "Dövlət Qulluğu"];
+    const categories = ["Bütün", "Məntiq", "İnformatika"];
 
     const filteredQuizzes = quizzes.filter((quiz) => {
         const matchesSearch = quiz.title.toLowerCase().includes(searchQuery.toLowerCase());

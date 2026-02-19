@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "EmrahEdu - Məntiq və İnformatika",
-  description: "Məntiq, İnformatika və Dövlət Qulluğu imtahanlarına hazırlıq platforması.",
+  description: "Məntiq və İnformatika imtahanlarına hazırlıq platforması.",
 };
 
 import { Navbar } from "@/components/shared/Navbar";

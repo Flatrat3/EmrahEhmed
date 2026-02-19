@@ -17,9 +17,7 @@ export default function LogicCurriculumPage() {
                     Dərslərə qayıt
                 </Link>
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Məntiq Dərsləri Proqramı</h1>
-                <p className="text-lg text-muted-foreground">
-                    Dövlət Qulluğu və Magistratura imtahanlarına hazırlıq üçün tam məntiq kursu proqramı.
-                </p>
+                Magistratura və digər imtahanlara hazırlıq üçün tam məntiq kursu proqramı.
             </div>
 
             <div className="grid gap-6">

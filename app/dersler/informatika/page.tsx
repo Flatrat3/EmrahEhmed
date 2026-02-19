@@ -17,7 +17,7 @@ export default function InformaticsCurriculumPage() {
                 </Link>
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">İnformatika Dərsləri Proqramı</h1>
                 <p className="text-lg text-muted-foreground">
-                    Dövlət Qulluğu və Magistratura imtahanlarına hazırlıq üçün tam informatika kursu proqramı.
+                    Magistratura və digər imtahanlara hazırlıq üçün tam informatika kursu proqramı.
                 </p>
             </div>
 

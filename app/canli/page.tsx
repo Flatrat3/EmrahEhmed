@@ -26,14 +26,7 @@ const upcomingLives = [
 ];
 
 const pastLives = [
-    {
-        id: 101,
-        title: "Dövlət Qulluğu: Qanunvericilik Sual-Cavab",
-        date: "15 Fevral 2024",
-        duration: "1 saat 20 dəq",
-        views: 1250,
-        thumbnail: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
-    },
+
     {
         id: 102,
         title: "Məntiq: Operatorlar Mövzusu",

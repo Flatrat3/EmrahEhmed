@@ -12,7 +12,7 @@ export default function LessonsPage() {
     const [selectedDifficulty, setSelectedDifficulty] = useState<string>("Bütün");
 
     // Derive unique categories and topics from data
-    const categories = ["Bütün", "Məntiq", "İnformatika", "Dövlət Qulluğu"];
+    const categories = ["Bütün", "Məntiq", "İnformatika"];
     const difficulties = ["Bütün", "Asan", "Orta", "Çətin"];
 
     const filteredLessons = useMemo(() => {
