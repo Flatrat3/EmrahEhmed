@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { quizzes } from "@/lib/data";
-import { Search, Brain, Clock, HelpCircle, ChevronRight } from "lucide-react";
+import { quizzes, lessons } from "@/lib/data";
+import { LessonCard } from "@/components/shared/LessonCard";
+import { Search, Brain, Clock, HelpCircle, ChevronRight, PlayCircle } from "lucide-react";
 
 export default function TestsPage() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -15,6 +16,15 @@ export default function TestsPage() {
         const matchesSearch = quiz.title.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesCategory = selectedCategory === "Bütün" || quiz.category === selectedCategory;
         return matchesSearch && matchesCategory;
+    });
+
+    // Filter for video tests/explanations
+    const testTopics = ["Sınaq", "Proqnoz", "Qarışıq"];
+    const filteredVideoTests = lessons.filter((lesson) => {
+        const matchesTopic = testTopics.includes(lesson.topic) || lesson.title.toLowerCase().includes("sınaq") || lesson.title.toLowerCase().includes("qəbul");
+        const matchesSearch = lesson.title.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesCategory = selectedCategory === "Bütün" || lesson.category === selectedCategory;
+        return matchesTopic && matchesSearch && matchesCategory;
     });
 
     return (
@@ -55,55 +65,80 @@ export default function TestsPage() {
                 ))}
             </div>
 
-            {/* Quizzes Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredQuizzes.length > 0 ? (
-                    filteredQuizzes.map((quiz) => (
-                        <div key={quiz.id} className="bg-card border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
-                            <div className="flex justify-between items-start mb-4">
-                                <div className={`p-3 rounded-xl ${quiz.category === "Məntiq" ? "bg-purple-100 text-purple-600 dark:bg-purple-900/20" :
-                                    quiz.category === "İnformatika" ? "bg-blue-100 text-blue-600 dark:bg-blue-900/20" :
-                                        "bg-amber-100 text-amber-600 dark:bg-amber-900/20"
-                                    }`}>
-                                    <Brain className="h-6 w-6" />
+            {/* Interactive Quizzes Grid */}
+            <div className="mb-12">
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <Brain className="h-6 w-6 text-primary" />
+                    İnteraktiv Sınaqlar
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredQuizzes.length > 0 ? (
+                        filteredQuizzes.map((quiz) => (
+                            <div key={quiz.id} className="bg-card border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col">
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className={`p-3 rounded-xl ${quiz.category === "Məntiq" ? "bg-purple-100 text-purple-600 dark:bg-purple-900/20" :
+                                        quiz.category === "İnformatika" ? "bg-blue-100 text-blue-600 dark:bg-blue-900/20" :
+                                            "bg-amber-100 text-amber-600 dark:bg-amber-900/20"
+                                        }`}>
+                                        <Brain className="h-6 w-6" />
+                                    </div>
+                                    <span className={`px-2 py-1 text-xs rounded-md font-medium ${quiz.difficulty === "Asan" ? "bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400" :
+                                        quiz.difficulty === "Orta" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400" :
+                                            "bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400"
+                                        }`}>
+                                        {quiz.difficulty}
+                                    </span>
                                 </div>
-                                <span className={`px-2 py-1 text-xs rounded-md font-medium ${quiz.difficulty === "Asan" ? "bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400" :
-                                    quiz.difficulty === "Orta" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400" :
-                                        "bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400"
-                                    }`}>
-                                    {quiz.difficulty}
-                                </span>
+
+                                <h3 className="text-xl font-bold mb-2">{quiz.title}</h3>
+                                <p className="text-muted-foreground text-sm mb-6 flex-1">
+                                    {quiz.description}
+                                </p>
+
+                                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                                    <div className="flex items-center gap-1">
+                                        <HelpCircle className="h-4 w-4" />
+                                        {quiz.questions.length} Sual
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <Clock className="h-4 w-4" />
+                                        {quiz.duration} dəq
+                                    </div>
+                                </div>
+
+                                <Link
+                                    href={`/test/${quiz.id}`}
+                                    className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-medium flex items-center justify-center hover:bg-primary/90 transition-colors"
+                                >
+                                    Sınağa Başla <ChevronRight className="ml-2 h-4 w-4" />
+                                </Link>
                             </div>
-
-                            <h3 className="text-xl font-bold mb-2">{quiz.title}</h3>
-                            <p className="text-muted-foreground text-sm mb-6 flex-1">
-                                {quiz.description}
-                            </p>
-
-                            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-                                <div className="flex items-center gap-1">
-                                    <HelpCircle className="h-4 w-4" />
-                                    {quiz.questions.length} Sual
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <Clock className="h-4 w-4" />
-                                    {quiz.duration} dəq
-                                </div>
-                            </div>
-
-                            <Link
-                                href={`/test/${quiz.id}`}
-                                className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-medium flex items-center justify-center hover:bg-primary/90 transition-colors"
-                            >
-                                Sınağa Başla <ChevronRight className="ml-2 h-4 w-4" />
-                            </Link>
+                        ))
+                    ) : (
+                        <div className="col-span-full py-8 text-center bg-slate-50 dark:bg-slate-900 rounded-xl border border-dashed">
+                            <p className="text-muted-foreground">İnteraktiv sınaq tapılmadı.</p>
                         </div>
-                    ))
-                ) : (
-                    <div className="col-span-full text-center py-12">
-                        <p className="text-muted-foreground">Axtarışınıza uyğun sınaq tapılmadı.</p>
-                    </div>
-                )}
+                    )}
+                </div>
+            </div>
+
+            {/* Video Tests Grid */}
+            <div>
+                <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <PlayCircle className="h-6 w-6 text-red-600" />
+                    Video Sınaq İzahları
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredVideoTests.length > 0 ? (
+                        filteredVideoTests.map((lesson) => (
+                            <LessonCard key={lesson.id} lesson={lesson} />
+                        ))
+                    ) : (
+                        <div className="col-span-full py-8 text-center bg-slate-50 dark:bg-slate-900 rounded-xl border border-dashed">
+                            <p className="text-muted-foreground">Video sınaq izahı tapılmadı.</p>
+                        </div>
+                    )}
+                </div>
             </div>
         </main>
     );

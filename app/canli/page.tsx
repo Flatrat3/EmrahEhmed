@@ -26,22 +26,50 @@ const upcomingLives = [
 ];
 
 const pastLives = [
-
     {
         id: 102,
-        title: "Məntiq: Operatorlar Mövzusu",
-        date: "10 Fevral 2024",
-        duration: "55 dəq",
-        views: 980,
-        thumbnail: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+        title: "DİM SINAQ : 29 YANVAR (MƏNTİQ) 2023",
+        date: "29 Yanvar 2023",
+        duration: "52 dəq",
+        views: 1200,
+        thumbnail: "https://img.youtube.com/vi/rrHLlO0mWKQ/maxresdefault.jpg",
+        videoUrl: "rrHLlO0mWKQ"
     },
     {
         id: 103,
-        title: "İnformatika: Təhlükəsizlik Əsasları",
-        date: "05 Fevral 2024",
+        title: "DİM (SINAQ 26 DEKABR 2021)",
+        date: "26 Dekabr 2021",
         duration: "45 dəq",
-        views: 850,
-        thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
+        views: 950,
+        thumbnail: "https://img.youtube.com/vi/bq99b8VzdHM/hqdefault.jpg",
+        videoUrl: "bq99b8VzdHM"
+    },
+    {
+        id: 104,
+        title: "ƏN SON QƏBUL İMTAHANINDA DÜŞMÜŞ SUAL TİPLƏRİ | 2022",
+        date: "15 Fevral 2022",
+        duration: "48 dəq",
+        views: 1100,
+        thumbnail: "https://img.youtube.com/vi/f0gBjZyHank/maxresdefault.jpg",
+        videoUrl: "f0gBjZyHank"
+    },
+    {
+        id: 105,
+        title: "Canlıda Məntiq Suallari",
+        date: "10 Fevral 2024",
+        duration: "60 dəq",
+        views: 1500,
+        thumbnail: "https://img.youtube.com/vi/3yQoQ8WXAxs/hqdefault.jpg",
+        videoUrl: "3yQoQ8WXAxs"
+    },
+    {
+        id: 106,
+        title: "Qəbulda düşəcək MƏNTİQ sualları",
+        date: "05 Fevral 2024",
+        duration: "40 dəq",
+        views: 1300,
+        thumbnail: "https://img.youtube.com/vi/-B4hsf9iW24/hqdefault.jpg",
+        videoUrl: "-B4hsf9iW24"
     }
 ];
 
@@ -107,12 +135,27 @@ export default function LiveLessonsPage() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {pastLives.map((video) => (
-                        <div key={video.id} className="group cursor-pointer">
+                        <Link
+                            key={video.id}
+                            href={`https://www.youtube.com/watch?v=${video.videoUrl}`}
+                            target="_blank"
+                            className="group cursor-pointer block"
+                        >
                             <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-xl mb-3 relative overflow-hidden">
                                 {/* Placeholder for real image */}
                                 <div className="absolute inset-0 bg-secondary flex items-center justify-center">
                                     <Video className="h-12 w-12 text-muted-foreground/30" />
                                 </div>
+                                {/* Actual Image if available */}
+                                {video.thumbnail && (
+                                    <div className="absolute inset-0">
+                                        <img
+                                            src={video.thumbnail}
+                                            alt={video.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                )}
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                                     <PlayCircle className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity transform scale-75 group-hover:scale-100 duration-300" />
                                 </div>
@@ -129,7 +172,7 @@ export default function LiveLessonsPage() {
                                     <Users className="h-3 w-3" /> {video.views} baxış
                                 </span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <div className="mt-8 text-center">
