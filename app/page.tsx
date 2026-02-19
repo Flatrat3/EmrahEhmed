@@ -53,12 +53,14 @@ export default async function Home() {
                 color="bg-purple-50 dark:bg-purple-900/10"
               />
             </Link>
-            <CategoryCard
-              icon={<Monitor className="h-8 w-8 text-blue-500" />}
-              title="İnformatika"
-              description="Kompüter əsasları, ofis proqramları və texnoloji biliklər."
-              color="bg-blue-50 dark:bg-blue-900/10"
-            />
+            <Link href="/dersler/informatika" className="block">
+              <CategoryCard
+                icon={<Monitor className="h-8 w-8 text-blue-500" />}
+                title="İnformatika"
+                description="Kompüter əsasları, ofis proqramları və texnoloji biliklər."
+                color="bg-blue-50 dark:bg-blue-900/10"
+              />
+            </Link>
             <CategoryCard
               icon={<Scale className="h-8 w-8 text-amber-500" />}
               title="Qanunvericilik"

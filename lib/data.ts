@@ -335,3 +335,19 @@ export const logicTopics: LogicTopic[] = [
         ]
     },
 ];
+
+export const informatikaTopics: LogicTopic[] = [
+    { id: "1", title: "Əsas Anlayışlar" },
+    { id: "2", title: "Say Sistemləri" },
+    { id: "3", title: "Kompüterin Texniki Təminatı" },
+    { id: "4", title: "Alqoritm (Brainware)" },
+    { id: "5", title: "Proqram Təminatı (Software)" },
+    { id: "6", title: "Əməliyyat Sistemləri" },
+    { id: "7", title: "Windows 7" },
+    { id: "8", title: "MS Word 2010" },
+    { id: "9", title: "MS Excel 2010" },
+    { id: "10", title: "MS Power Point 2010" },
+    { id: "11", title: "MS Access (VBİS)" },
+    { id: "12", title: "Kompüter Qrafikası" },
+    { id: "13", title: "Kompüter, İnternet Qlobal Şəbəkələri" },
+];

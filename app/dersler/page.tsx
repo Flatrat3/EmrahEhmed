@@ -62,10 +62,17 @@ export default function LessonsPage() {
                             <h3 className="text-sm font-medium mb-3 text-muted-foreground uppercase tracking-wider">Tədris Proqramı</h3>
                             <Link
                                 href="/dersler/mentiq"
-                                className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                                className="flex items-center gap-2 text-sm font-medium text-primary hover:underline mb-2"
                             >
                                 <BookOpen className="h-4 w-4" />
                                 Məntiq Proqramı
+                            </Link>
+                            <Link
+                                href="/dersler/informatika"
+                                className="flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline"
+                            >
+                                <BookOpen className="h-4 w-4" />
+                                İnformatika Proqramı
                             </Link>
                         </div>
 
