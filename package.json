@@ -1,5 +1,5 @@
 {
-  "name": "temp_app",
+  "name": "emrahedu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "fast-xml-parser": "^5.3.6",
+    "framer-motion": "^12.34.2",
+    "lucide-react": "^0.574.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "swiper": "^12.1.2",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
